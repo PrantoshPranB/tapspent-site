@@ -12,8 +12,61 @@ import appleWatchImage from "../../imports/App_SS_6.png";
 export default function Home() {
   return (
     <div className="min-h-screen bg-[#F5F3ED] overflow-x-hidden">
+      {/* Header */}
+      <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-[#6B7C5E]/10">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+          <Link to="/">
+            <img src={logo} alt="TapSpent" className="h-8 cursor-pointer" />
+          </Link>
+
+          <nav className="hidden md:flex items-center gap-8">
+            <a
+              href="#features"
+              className="text-sm opacity-70 hover:opacity-100 transition-opacity"
+              style={{
+                fontFamily: 'Inter, system-ui, sans-serif',
+                color: '#3A3D35'
+              }}
+            >
+              Features
+            </a>
+            <Link
+              to="/about"
+              className="text-sm opacity-70 hover:opacity-100 transition-opacity"
+              style={{
+                fontFamily: 'Inter, system-ui, sans-serif',
+                color: '#3A3D35'
+              }}
+            >
+              About
+            </Link>
+            <Link
+              to="/privacy"
+              className="text-sm opacity-70 hover:opacity-100 transition-opacity"
+              style={{
+                fontFamily: 'Inter, system-ui, sans-serif',
+                color: '#3A3D35'
+              }}
+            >
+              Privacy
+            </Link>
+          </nav>
+
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.98 }}
+            className="px-6 py-2 bg-[#3A3D35] text-white rounded-full text-sm hover:shadow-lg transition-all duration-300"
+            style={{
+              fontFamily: 'Inter, system-ui, sans-serif'
+            }}
+          >
+            Download
+          </motion.button>
+        </div>
+      </header>
+
       {/* Hero Section - Clarity for every day */}
-      <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-6 py-20">
+      <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-6 py-20 pt-32">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -108,7 +161,7 @@ export default function Home() {
           >
             <img src={logo} alt="TapSpent" className="h-8 mb-8 opacity-60" />
             <h2
-              className="mb-8"
+              className="mb-4"
               style={{
                 fontFamily: '"Instrument Serif", serif',
                 fontSize: 'clamp(2rem, 5vw, 4rem)',
@@ -117,8 +170,19 @@ export default function Home() {
                 letterSpacing: '-0.02em'
               }}
             >
-              Track spending<br />effortlessly
+              Two taps to<br />log any expense
             </h2>
+            <p
+              className="opacity-60 max-w-2xl"
+              style={{
+                fontFamily: 'Inter, system-ui, sans-serif',
+                fontSize: '1.125rem',
+                color: '#3A3D35',
+                lineHeight: '1.6'
+              }}
+            >
+              No complicated forms. No unnecessary steps. Just tap, type the amount, and you're done. Logging takes seconds, not minutes.
+            </p>
           </motion.div>
 
           <motion.div
@@ -174,7 +238,7 @@ export default function Home() {
           >
             <img src={logo} alt="TapSpent" className="h-8 mb-8 opacity-60" />
             <h2
-              className="mb-8"
+              className="mb-4"
               style={{
                 fontFamily: '"Instrument Serif", serif',
                 fontSize: 'clamp(2rem, 5vw, 4rem)',
@@ -183,8 +247,19 @@ export default function Home() {
                 letterSpacing: '-0.02em'
               }}
             >
-              Your data<br />stays private.
+              Built for privacy,<br />not profit
             </h2>
+            <p
+              className="opacity-60 max-w-2xl"
+              style={{
+                fontFamily: 'Inter, system-ui, sans-serif',
+                fontSize: '1.125rem',
+                color: '#3A3D35',
+                lineHeight: '1.6'
+              }}
+            >
+              Everything stays on your device. No cloud, no tracking, no data broker nonsense. Your financial life is yours alone.
+            </p>
           </motion.div>
 
           <motion.div
@@ -224,7 +299,7 @@ export default function Home() {
           >
             <img src={logo} alt="TapSpent" className="h-8 mb-8 opacity-60" />
             <h2
-              className="mb-8"
+              className="mb-4"
               style={{
                 fontFamily: '"Instrument Serif", serif',
                 fontSize: 'clamp(2rem, 5vw, 4rem)',
@@ -233,8 +308,19 @@ export default function Home() {
                 letterSpacing: '-0.02em'
               }}
             >
-              Log expenses<br />with Siri or Apple Watch
+              Log on the go with<br />voice and wearables
             </h2>
+            <p
+              className="opacity-60 max-w-2xl"
+              style={{
+                fontFamily: 'Inter, system-ui, sans-serif',
+                fontSize: '1.125rem',
+                color: '#3A3D35',
+                lineHeight: '1.6'
+              }}
+            >
+              "Hey Siri, log $15 for coffee" or tap your Apple Watch. Never let a transaction slip away just because you're busy.
+            </p>
           </motion.div>
 
           <motion.div
@@ -274,7 +360,7 @@ export default function Home() {
           >
             <img src={logo} alt="TapSpent" className="h-8 mb-8 opacity-60" />
             <h2
-              className="mb-8"
+              className="mb-4"
               style={{
                 fontFamily: '"Instrument Serif", serif',
                 fontSize: 'clamp(2rem, 5vw, 4rem)',
@@ -283,8 +369,19 @@ export default function Home() {
                 letterSpacing: '-0.02em'
               }}
             >
-              Clarity,<br />at a glance.
+              Check in without<br />opening the app
             </h2>
+            <p
+              className="opacity-60 max-w-2xl"
+              style={{
+                fontFamily: 'Inter, system-ui, sans-serif',
+                fontSize: '1.125rem',
+                color: '#3A3D35',
+                lineHeight: '1.6'
+              }}
+            >
+              Lock screen widgets put your spending summary right where you look first. One glance and you know where you stand today.
+            </p>
           </motion.div>
 
           <motion.div
@@ -324,7 +421,7 @@ export default function Home() {
           >
             <img src={logo} alt="TapSpent" className="h-8 mb-8 opacity-60" />
             <h2
-              className="mb-8"
+              className="mb-4"
               style={{
                 fontFamily: '"Instrument Serif", serif',
                 fontSize: 'clamp(2rem, 5vw, 4rem)',
@@ -333,8 +430,19 @@ export default function Home() {
                 letterSpacing: '-0.02em'
               }}
             >
-              See your spending.<br />Find your clarity.
+              Understand your<br />spending patterns
             </h2>
+            <p
+              className="opacity-60 max-w-2xl"
+              style={{
+                fontFamily: 'Inter, system-ui, sans-serif',
+                fontSize: '1.125rem',
+                color: '#3A3D35',
+                lineHeight: '1.6'
+              }}
+            >
+              Beautiful charts and insights reveal where your money actually goes. Knowledge is the first step to change.
+            </p>
           </motion.div>
 
           <motion.div
