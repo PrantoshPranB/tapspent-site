@@ -155,219 +155,63 @@ export default function Home() {
 
       {/* Privacy Section */}
       <section className="relative py-32 px-6 bg-white overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
+        <div className="absolute inset-0 opacity-30">
           <img
             src="https://images.unsplash.com/photo-1542751675-5bd6665a0f2b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw1fHxzZXJlbmUlMjBtb3VudGFpbiUyMGxha2UlMjBmb3Jlc3QlMjBjYWxtJTIwYXRtb3NwaGVyaWN8ZW58MXx8fHwxNzc4NzkzNzgzfDA&ixlib=rb-4.1.0&q=80&w=1080"
             alt="Forest nature"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-white via-white/95 to-white" />
+          <div className="absolute inset-0 bg-gradient-to-b from-white/50 via-transparent to-white/50" />
         </div>
 
         <div className="relative max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            {/* Left side - Text and icons */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1 }}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1 }}
+            className="flex flex-col items-center text-center mb-16"
+          >
+            <img src={logo} alt="TapSpent" className="h-8 mb-8 opacity-60" />
+            <h2
+              className="mb-8"
+              style={{
+                fontFamily: '"Instrument Serif", serif',
+                fontSize: 'clamp(2rem, 5vw, 4rem)',
+                lineHeight: '1.15',
+                color: '#3A3D35',
+                letterSpacing: '-0.02em'
+              }}
             >
-              <img src={logo} alt="TapSpent" className="h-6 mb-8 opacity-60" />
+              Your data<br />stays private.
+            </h2>
+          </motion.div>
 
-              <h2
-                className="mb-6"
-                style={{
-                  fontFamily: '"Instrument Serif", serif',
-                  fontSize: 'clamp(2.5rem, 5vw, 4rem)',
-                  lineHeight: '1.15',
-                  color: '#3A3D35',
-                  letterSpacing: '-0.02em'
-                }}
-              >
-                Your data<br />stays private.
-              </h2>
-
-              <p
-                className="mb-12 opacity-60 max-w-md"
-                style={{
-                  fontFamily: 'Inter, system-ui, sans-serif',
-                  fontSize: '1.0625rem',
-                  lineHeight: '1.7',
-                  color: '#3A3D35'
-                }}
-              >
-                TapSpent is 100% private and local. Your data never leaves your device and is never shared.
-              </p>
-
-              <div className="space-y-6">
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.1 }}
-                  className="flex items-start gap-4"
-                >
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#6B7C5E]/10 flex items-center justify-center">
-                    <Shield className="w-5 h-5 text-[#6B7C5E]" />
-                  </div>
-                  <div>
-                    <div
-                      className="mb-1"
-                      style={{
-                        fontFamily: 'Inter, system-ui, sans-serif',
-                        fontSize: '0.9375rem',
-                        color: '#3A3D35'
-                      }}
-                    >
-                      100% Private
-                    </div>
-                    <p
-                      className="opacity-50 text-sm"
-                      style={{
-                        fontFamily: 'Inter, system-ui, sans-serif',
-                        color: '#3A3D35'
-                      }}
-                    >
-                      Never leaves your device
-                    </p>
-                  </div>
-                </motion.div>
-
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                  className="flex items-start gap-4"
-                >
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#6B7C5E]/10 flex items-center justify-center">
-                    <svg className="w-5 h-5 text-[#6B7C5E]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <div
-                      className="mb-1"
-                      style={{
-                        fontFamily: 'Inter, system-ui, sans-serif',
-                        fontSize: '0.9375rem',
-                        color: '#3A3D35'
-                      }}
-                    >
-                      On-Device Only
-                    </div>
-                    <p
-                      className="opacity-50 text-sm"
-                      style={{
-                        fontFamily: 'Inter, system-ui, sans-serif',
-                        color: '#3A3D35'
-                      }}
-                    >
-                      All processing is local
-                    </p>
-                  </div>
-                </motion.div>
-
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.3 }}
-                  className="flex items-start gap-4"
-                >
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#6B7C5E]/10 flex items-center justify-center">
-                    <svg className="w-5 h-5 text-[#6B7C5E]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21" />
-                    </svg>
-                  </div>
-                  <div>
-                    <div
-                      className="mb-1"
-                      style={{
-                        fontFamily: 'Inter, system-ui, sans-serif',
-                        fontSize: '0.9375rem',
-                        color: '#3A3D35'
-                      }}
-                    >
-                      No Tracking
-                    </div>
-                    <p
-                      className="opacity-50 text-sm"
-                      style={{
-                        fontFamily: 'Inter, system-ui, sans-serif',
-                        color: '#3A3D35'
-                      }}
-                    >
-                      We never see your data
-                    </p>
-                  </div>
-                </motion.div>
-
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.4 }}
-                  className="flex items-start gap-4"
-                >
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#6B7C5E]/10 flex items-center justify-center">
-                    <svg className="w-5 h-5 text-[#6B7C5E]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <div
-                      className="mb-1"
-                      style={{
-                        fontFamily: 'Inter, system-ui, sans-serif',
-                        fontSize: '0.9375rem',
-                        color: '#3A3D35'
-                      }}
-                    >
-                      Fully Encrypted
-                    </div>
-                    <p
-                      className="opacity-50 text-sm"
-                      style={{
-                        fontFamily: 'Inter, system-ui, sans-serif',
-                        color: '#3A3D35'
-                      }}
-                    >
-                      Secure local storage
-                    </p>
-                  </div>
-                </motion.div>
-              </div>
-            </motion.div>
-
-            {/* Right side - iPhone mockup */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1.2 }}
-              className="flex justify-center md:justify-end"
-            >
-              <img
-                src={privacyImage}
-                alt="Privacy first"
-                className="w-full max-w-xs md:max-w-sm"
-              />
-            </motion.div>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1.2 }}
+            className="flex justify-center"
+          >
+            <img
+              src={privacyImage}
+              alt="Privacy first"
+              className="w-full max-w-sm"
+            />
+          </motion.div>
         </div>
       </section>
 
       {/* Apple Watch & Siri */}
       <section className="relative py-32 px-6 bg-[#F5F3ED] overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
+        <div className="absolute inset-0 opacity-30">
           <img
             src="https://images.unsplash.com/photo-1621519997950-158b631341b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzZXJlbmUlMjBtb3VudGFpbiUyMGxha2UlMjBmb3Jlc3QlMjBjYWxtJTIwYXRtb3NwaGVyaWN8ZW58MXx8fHwxNzc4NzkzNzgzfDA&ixlib=rb-4.1.0&q=80&w=1080"
             alt="Lake and mountains"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#F5F3ED] via-[#F5F3ED]/90 to-[#F5F3ED]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#F5F3ED]/50 via-transparent to-[#F5F3ED]/50" />
         </div>
 
         <div className="relative max-w-7xl mx-auto">
@@ -461,13 +305,13 @@ export default function Home() {
 
       {/* Beautiful Reports */}
       <section className="relative py-32 px-6 bg-white overflow-hidden">
-        <div className="absolute inset-0 opacity-15">
+        <div className="absolute inset-0 opacity-30">
           <img
-            src="https://images.unsplash.com/photo-1516040217640-43603638e8e4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw0fHxzZXJlbmUlMjBtb3VudGFpbiUyMGxha2UlMjBmb3Jlc3QlMjBjYWxtJTIwYXRtb3NwaGVyaWN8ZW58MXx8fHwxNzc4NzkzNzgzfDA&ixlib=rb-4.1.0&q=80&w=1080"
+            src="https://images.unsplash.com/photo-1516040217640-43603638e8e4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw0fHxzZXJlbmUlMjBtb3VudGFpbiUyMGxha2UlMjBjYWxtJTIwYXRtb3NwaGVyaWN8ZW58MXx8fHwxNzc4NzkzNzgzfDA&ixlib=rb-4.1.0&q=80&w=1080"
             alt="Mountain lake"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-white via-white/95 to-white" />
+          <div className="absolute inset-0 bg-gradient-to-b from-white/50 via-transparent to-white/50" />
         </div>
 
         <div className="relative max-w-7xl mx-auto">
