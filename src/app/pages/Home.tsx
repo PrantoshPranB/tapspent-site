@@ -3,6 +3,7 @@ import { Download, Shield } from "lucide-react";
 import { Link } from "react-router";
 import logo from "../../imports/TapSpent_Logo_Text-2.png";
 import heroImage from "../../imports/App_SS_1-1.png";
+import reflectionImage from "../../imports/ChatGPT_Image_May_15__2026_at_03_18_48_AM.png";
 import privacyImage from "../../imports/App_SS_2-1.png";
 import doubleTapImage from "../../imports/App_SS_3-1.png";
 import widgetsImage from "../../imports/App_SS_4-1.png";
@@ -138,6 +139,100 @@ export default function Home() {
         >
           Clarity for every day.<br />Day and night.
         </motion.p>
+      </section>
+
+      {/* Expense Tracking - Guilt-Free */}
+      <section className="relative py-32 px-6 bg-white overflow-hidden">
+        <div className="absolute inset-0 opacity-20">
+          <img
+            src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsYWtlJTIwbW91bnRhaW4lMjBzdW5yaXNlJTIwY2FsbSUyMHNlcmVuZXxlbnwxfHx8fDE3Nzg3OTM3ODN8MA&ixlib=rb-4.1.0&q=80&w=1080"
+            alt="Lake sunrise"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-white via-transparent to-white/30" />
+        </div>
+
+        <div className="relative max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            {/* Left Content */}
+            <motion.div
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1 }}
+              className="flex flex-col"
+            >
+              {/* Leaf Icon */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1, delay: 0.2 }}
+                className="mb-6"
+              >
+                <svg className="w-8 h-8 text-[#6B7C5E]" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                </svg>
+              </motion.div>
+
+              <motion.h2
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1, delay: 0.1 }}
+                className="mb-4"
+                style={{
+                  fontFamily: '"Instrument Serif", serif',
+                  fontSize: 'clamp(1.875rem, 5vw, 3.5rem)',
+                  lineHeight: '1.15',
+                  color: '#3A3D35',
+                  letterSpacing: '-0.02em'
+                }}
+              >
+                Expense tracking<br />that doesn't make<br />you feel guilty.
+              </motion.h2>
+
+              {/* Decorative divider */}
+              <motion.div
+                initial={{ opacity: 0, width: 0 }}
+                whileInView={{ opacity: 1, width: '3rem' }}
+                viewport={{ once: true }}
+                transition={{ duration: 1, delay: 0.3 }}
+                className="h-px bg-[#6B7C5E]/30 mb-6"
+              />
+
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1, delay: 0.2 }}
+                style={{
+                  fontFamily: 'Inter, system-ui, sans-serif',
+                  fontSize: '1.125rem',
+                  color: '#6B7C5E',
+                  lineHeight: '1.6'
+                }}
+              >
+                Mindful spending made simpler.
+              </motion.p>
+            </motion.div>
+
+            {/* Right Content - Image */}
+            <motion.div
+              initial={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, delay: 0.2 }}
+              className="flex justify-center"
+            >
+              <img
+                src={reflectionImage}
+                alt="Expense tracking reflection"
+                className="w-full max-w-sm rounded-3xl shadow-2xl"
+              />
+            </motion.div>
+          </div>
+        </div>
       </section>
 
       {/* Track Spending Effortlessly */}
