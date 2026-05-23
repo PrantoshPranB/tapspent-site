@@ -2,12 +2,15 @@ import { motion } from "motion/react";
 import { Download, Shield } from "lucide-react";
 import { Link } from "react-router";
 import logo from "../../imports/TapSpent_Logo_Text-2.png";
-import heroImage from "../../imports/App_SS_1-1.png";
-import privacyImage from "../../imports/App_SS_2-1.png";
-import doubleTapImage from "../../imports/App_SS_3-1.png";
-import widgetsImage from "../../imports/App_SS_4-1.png";
-import reportsImage from "../../imports/App_SS_5-1.png";
-import appleWatchImage from "../../imports/App_SS_6.png";
+import heroImage from "../../imports/101.png";
+import privacyImage from "../../imports/102.png";
+import doubleTapImage from "../../imports/103.png";
+import widgetsImage from "../../imports/104.png";
+import reportsImage from "../../imports/105.png";
+import appleWatchImage from "../../imports/106.png";
+import glanceImage from "../../imports/107.png";
+import analyticsImage from "../../imports/108.png";
+import effortlessImage from "../../imports/109.png";
 
 export default function Home() {
   return (
@@ -136,11 +139,11 @@ export default function Home() {
             fontStyle: 'italic'
           }}
         >
-          Clarity for every day.<br />Day and night.
+          Reflect gently.<br />Spend intentionally.
         </motion.p>
       </section>
 
-      {/* Track Spending Effortlessly */}
+      {/* Two Taps to Log */}
       <section className="relative py-32 px-6 overflow-hidden">
         <div className="absolute inset-0 opacity-30">
           <img
@@ -170,7 +173,7 @@ export default function Home() {
                 letterSpacing: '-0.02em'
               }}
             >
-              Two taps to<br />log any expense
+              Spend with awareness
             </h2>
             <p
               className="opacity-60 max-w-2xl"
@@ -181,7 +184,7 @@ export default function Home() {
                 lineHeight: '1.6'
               }}
             >
-              No complicated forms. No unnecessary steps. Just tap, type the amount, and you're done. Logging takes seconds, not minutes.
+              Designed to help you understand daily choices without pressure, guilt, or overwhelm.
             </p>
           </motion.div>
 
@@ -212,7 +215,7 @@ export default function Home() {
               fontStyle: 'italic'
             }}
           >
-            Double tap to log
+            Small moments.<br />Better habits.
           </motion.p>
         </div>
       </section>
@@ -258,7 +261,7 @@ export default function Home() {
                 lineHeight: '1.6'
               }}
             >
-              Everything stays on your device. No cloud, no tracking, no data broker nonsense. Your financial life is yours alone.
+              Your spending data stays on your device. No syncing to the cloud, no selling to data brokers, no ads. Complete privacy, complete control.
             </p>
           </motion.div>
 
@@ -275,71 +278,29 @@ export default function Home() {
               className="w-full max-w-sm"
             />
           </motion.div>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, delay: 0.3 }}
+            className="mt-12 text-center opacity-50"
+            style={{
+              fontFamily: '"Instrument Serif", serif',
+              fontSize: '1.125rem',
+              color: '#3A3D35',
+              fontStyle: 'italic'
+            }}
+          >
+            Your spending stays yours
+            
+          </motion.p>
         </div>
       </section>
 
-      {/* Apple Watch & Siri */}
-      <section className="relative py-32 px-6 bg-[#F5F3ED] overflow-hidden">
-        <div className="absolute inset-0 opacity-30">
-          <img
-            src="https://images.unsplash.com/photo-1621519997950-158b631341b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzZXJlbmUlMjBtb3VudGFpbiUyMGxha2UlMjBmb3Jlc3QlMjBjYWxtJTIwYXRtb3NwaGVyaWN8ZW58MXx8fHwxNzc4NzkzNzgzfDA&ixlib=rb-4.1.0&q=80&w=1080"
-            alt="Lake and mountains"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#F5F3ED]/50 via-transparent to-[#F5F3ED]/50" />
-        </div>
+      
 
-        <div className="relative max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1 }}
-            className="flex flex-col items-center text-center mb-16"
-          >
-            <img src={logo} alt="TapSpent" className="h-8 mb-8 opacity-60" />
-            <h2
-              className="mb-4"
-              style={{
-                fontFamily: '"Instrument Serif", serif',
-                fontSize: 'clamp(2rem, 5vw, 4rem)',
-                lineHeight: '1.15',
-                color: '#3A3D35',
-                letterSpacing: '-0.02em'
-              }}
-            >
-              Log on the go with<br />voice and wearables
-            </h2>
-            <p
-              className="opacity-60 max-w-2xl"
-              style={{
-                fontFamily: 'Inter, system-ui, sans-serif',
-                fontSize: '1.125rem',
-                color: '#3A3D35',
-                lineHeight: '1.6'
-              }}
-            >
-              "Hey Siri, log $15 for coffee" or tap your Apple Watch. Never let a transaction slip away just because you're busy.
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1.2 }}
-            className="flex justify-center"
-          >
-            <img
-              src={appleWatchImage}
-              alt="Apple Watch with TapSpent"
-              className="w-full max-w-sm"
-            />
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Widgets - Clarity at a glance */}
+      {/* Light/Dark modes. */}
       <section className="relative py-32 px-6 overflow-hidden">
         <div className="absolute inset-0 opacity-25">
           <img
@@ -369,7 +330,7 @@ export default function Home() {
                 letterSpacing: '-0.02em'
               }}
             >
-              Check in without<br />opening the app
+              Built for calm everyday use
             </h2>
             <p
               className="opacity-60 max-w-2xl"
@@ -380,7 +341,7 @@ export default function Home() {
                 lineHeight: '1.6'
               }}
             >
-              Lock screen widgets put your spending summary right where you look first. One glance and you know where you stand today.
+              Thoughtful design and beautiful insights that make understanding spending feel effortless.
             </p>
           </motion.div>
 
@@ -397,6 +358,98 @@ export default function Home() {
               className="w-full max-w-sm"
             />
           </motion.div>
+          
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, delay: 0.3 }}
+            className="mt-12 text-center opacity-50"
+            style={{
+              fontFamily: '"Instrument Serif", serif',
+              fontSize: '1.125rem',
+              color: '#3A3D35',
+              fontStyle: 'italic'
+            }}
+          >
+            Built for calm everyday use
+          </motion.p>
+        </div>
+      </section>
+
+{/* Apple Watch & Siri */}
+      <section className="relative py-32 px-6 bg-[#F5F3ED] overflow-hidden">
+        <div className="absolute inset-0 opacity-30">
+          <img
+            src="https://images.unsplash.com/photo-1621519997950-158b631341b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzZXJlbmUlMjBtb3VudGFpbiUyMGxha2UlMjBmb3Jlc3QlMjBjYWxtJTIwYXRtb3NwaGVyaWN8ZW58MXx8fHwxNzc4NzkzNzgzfDA&ixlib=rb-4.1.0&q=80&w=1080"
+            alt="Lake and mountains"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#F5F3ED]/50 via-transparent to-[#F5F3ED]/50" />
+        </div>
+
+        <div className="relative max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1 }}
+            className="flex flex-col items-center text-center mb-16"
+          >
+            <img src={logo} alt="TapSpent" className="h-8 mb-8 opacity-60" />
+            <h2
+              className="mb-4"
+              style={{
+                fontFamily: '"Instrument Serif", serif',
+                fontSize: 'clamp(2rem, 5vw, 4rem)',
+                lineHeight: '1.15',
+                color: '#3A3D35',
+                letterSpacing: '-0.02em'
+              }}
+            >
+              Smarter insights.<br />voice and wearables
+            </h2>
+            <p
+              className="opacity-60 max-w-2xl"
+              style={{
+                fontFamily: 'Inter, system-ui, sans-serif',
+                fontSize: '1.125rem',
+                color: '#3A3D35',
+                lineHeight: '1.6'
+              }}
+            >
+              Apple Intelligence helps surface meaningful patterns while keeping the experience intuitive.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1.2 }}
+            className="flex justify-center"
+          >
+            <img
+              src={appleWatchImage}
+              alt="Apple Watch with TapSpent"
+              className="w-full max-w-sm"
+            />
+          </motion.div>          
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, delay: 0.3 }}
+            className="mt-12 text-center opacity-50"
+            style={{
+              fontFamily: '"Instrument Serif", serif',
+              fontSize: '1.125rem',
+              color: '#3A3D35',
+              fontStyle: 'italic'
+            }}
+          >
+            Understands quietly in the background
+          </motion.p>
         </div>
       </section>
 
@@ -430,7 +483,7 @@ export default function Home() {
                 letterSpacing: '-0.02em'
               }}
             >
-              Understand your<br />spending patterns
+              Capture spending anywhere
             </h2>
             <p
               className="opacity-60 max-w-2xl"
@@ -441,7 +494,7 @@ export default function Home() {
                 lineHeight: '1.6'
               }}
             >
-              Beautiful charts and insights reveal where your money actually goes. Knowledge is the first step to change.
+              Use Siri or Apple Watch to quickly log spending while you're on the move.
             </p>
           </motion.div>
 
@@ -458,48 +511,255 @@ export default function Home() {
               className="w-full max-w-sm"
             />
           </motion.div>
+                    <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, delay: 0.3 }}
+            className="mt-12 text-center opacity-50"
+            style={{
+              fontFamily: '"Instrument Serif", serif',
+              fontSize: '1.125rem',
+              color: '#3A3D35',
+              fontStyle: 'italic'
+            }}
+          >
+            Fast enough for everyday life
+          </motion.p>
         </div>
       </section>
 
-      {/* Privacy */}
-      <section className="py-32 px-6 bg-[#F5F3ED]">
-        <div className="max-w-3xl mx-auto text-center">
+      {/* Clarity at a Glance */}
+      <section className="relative py-32 px-6 overflow-hidden">
+        <div className="absolute inset-0 opacity-25">
+          <img
+            src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzZXJlbmUlMjBmb3Jlc3QlMjBuYXR1cmUlMjBwYXJrJTIwY2FsbXxlbnwxfHx8fDE3Nzg3OTM3ODN8MA&ixlib=rb-4.1.0&q=80&w=1080"
+            alt="Nature landscape"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#F5F3ED] via-[#F5F3ED]/95 to-[#F5F3ED]" />
+        </div>
+
+        <div className="relative max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1 }}
+            className="flex flex-col items-center text-center mb-16"
           >
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#6B7C5E]/10 mb-8">
-              <Shield className="w-8 h-8 text-[#6B7C5E]" />
-            </div>
+            <img src={logo} alt="TapSpent" className="h-8 mb-8 opacity-60" />
             <h2
-              className="mb-6"
+              className="mb-4"
               style={{
                 fontFamily: '"Instrument Serif", serif',
-                fontSize: 'clamp(2rem, 4vw, 3rem)',
-                lineHeight: '1.2',
+                fontSize: 'clamp(2rem, 5vw, 4rem)',
+                lineHeight: '1.15',
                 color: '#3A3D35',
-                letterSpacing: '-0.01em'
+                letterSpacing: '-0.02em'
               }}
             >
-              Your data stays<br />on your device
+              Always in view
             </h2>
             <p
-              className="opacity-60 max-w-xl mx-auto"
+              className="opacity-60 max-w-2xl"
               style={{
                 fontFamily: 'Inter, system-ui, sans-serif',
                 fontSize: '1.125rem',
-                lineHeight: '1.7',
-                color: '#3A3D35'
+                color: '#3A3D35',
+                lineHeight: '1.6'
               }}
             >
-              TapSpent is built with privacy at its core.<br />
-              All your data is stored locally. No cloud. No tracking. No ads.
+              Widgets keep your spending summary visible right on your lock screen and home screen.
             </p>
           </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1.2 }}
+            className="flex justify-center"
+          >
+            <img
+              src={glanceImage}
+              alt="Quick spending summary"
+              className="w-full max-w-sm"
+            />
+          </motion.div>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, delay: 0.3 }}
+            className="mt-12 text-center opacity-50"
+            style={{
+              fontFamily: '"Instrument Serif", serif',
+              fontSize: '1.125rem',
+              color: '#3A3D35',
+              fontStyle: 'italic'
+            }}
+          >
+            Awareness without opening the app
+          </motion.p>
         </div>
       </section>
+
+      {/* Deep Insights */}
+      <section className="relative py-32 px-6 bg-white overflow-hidden">
+        <div className="absolute inset-0 opacity-30">
+          <img
+            src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw3fHxzZXJlbmUlMjBmb3Jlc3QlMjBuYXR1cmUlMjBwYXJrJTIwY2FsbXxlbnwxfHx8fDE3Nzg3OTM3ODN8MA&ixlib=rb-4.1.0&q=80&w=1080"
+            alt="Mountain landscape"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-white/50 via-transparent to-white/50" />
+        </div>
+
+        <div className="relative max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1 }}
+            className="flex flex-col items-center text-center mb-16"
+          >
+            <img src={logo} alt="TapSpent" className="h-8 mb-8 opacity-60" />
+            <h2
+              className="mb-4"
+              style={{
+                fontFamily: '"Instrument Serif", serif',
+                fontSize: 'clamp(2rem, 5vw, 4rem)',
+                lineHeight: '1.15',
+                color: '#3A3D35',
+                letterSpacing: '-0.02em'
+              }}
+            >
+              See your spending.<br />Find your clarity.
+            </h2>
+            <p
+              className="opacity-60 max-w-2xl"
+              style={{
+                fontFamily: 'Inter, system-ui, sans-serif',
+                fontSize: '1.125rem',
+                color: '#3A3D35',
+                lineHeight: '1.6'
+              }}
+            >
+              Deep insights into your financial habits. Beautiful visualizations and detailed breakdowns reveal patterns you never noticed, empowering smarter spending decisions.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1.2 }}
+            className="flex justify-center"
+          >
+            <img
+              src={analyticsImage}
+              alt="Detailed spending analytics"
+              className="w-full max-w-sm"
+            />
+          </motion.div>
+          
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, delay: 0.3 }}
+            className="mt-12 text-center opacity-50"
+            style={{
+              fontFamily: '"Instrument Serif", serif',
+              fontSize: '1.125rem',
+              color: '#3A3D35',
+              fontStyle: 'italic'
+            }}
+          >
+            Patterns become easier to notice
+          </motion.p>
+        </div>
+      </section>
+
+      {/* Effortless Tracking */}
+      <section className="relative py-32 px-6 overflow-hidden">
+        <div className="absolute inset-0 opacity-25">
+          <img
+            src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzZXJlbmUlMjBmb3Jlc3QlMjBuYXR1cmUlMjBwYXJrJTIwY2FsbXxlbnwxfHx8fDE3Nzg3OTM3ODN8MA&ixlib=rb-4.1.0&q=80&w=1080"
+            alt="Nature landscape"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#F5F3ED] via-[#F5F3ED]/95 to-[#F5F3ED]" />
+        </div>
+
+        <div className="relative max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1 }}
+            className="flex flex-col items-center text-center mb-16"
+          >
+            <img src={logo} alt="TapSpent" className="h-8 mb-8 opacity-60" />
+            <h2
+              className="mb-4"
+              style={{
+                fontFamily: '"Instrument Serif", serif',
+                fontSize: 'clamp(2rem, 5vw, 4rem)',
+                lineHeight: '1.15',
+                color: '#3A3D35',
+                letterSpacing: '-0.02em'
+              }}
+            >
+              Built to feel<br />effortless
+            </h2>
+            <p
+              className="opacity-60 max-w-2xl"
+              style={{
+                fontFamily: 'Inter, system-ui, sans-serif',
+                fontSize: '1.125rem',
+                color: '#3A3D35',
+                lineHeight: '1.6'
+              }}
+            >
+              Double tap to log. That's it. No forms, no friction—just you and your phone capturing expenses as they happen. Tracking becomes instinctive.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1.2 }}
+            className="flex justify-center"
+          >
+            <img
+              src={effortlessImage}
+              alt="Effortless expense tracking"
+              className="w-full max-w-sm"
+            />
+          </motion.div>
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, delay: 0.3 }}
+            className="mt-12 text-center opacity-50"
+            style={{
+              fontFamily: '"Instrument Serif", serif',
+              fontSize: '1.125rem',
+              color: '#3A3D35',
+              fontStyle: 'italic'
+            }}
+          >
+            Simple enough to stick with
+          </motion.p>
+        </div>
+      </section>
+
+      
 
       {/* CTA */}
       <section className="py-32 px-6 bg-white">
