@@ -52,9 +52,7 @@ export default function PrivacyPolicy() {
             >
               <h2 className="text-xl font-semibold mb-3">Data Collection</h2>
               <p className="opacity-70">
-                TapSpent does not collect, transmit, or share any personal data. All expense and
-                income records you create are stored exclusively on your device using Apple's
-                SwiftData framework.
+                TapSpent does not collect, transmit, or share any personal data. All expense and income records you create are stored exclusively on your device using Apple's SwiftData framework.
               </p>
             </motion.section>
 
@@ -65,9 +63,7 @@ export default function PrivacyPolicy() {
             >
               <h2 className="text-xl font-semibold mb-3">Local Storage Only</h2>
               <p className="opacity-70">
-                Your financial data never leaves your device. There are no analytics, tracking,
-                or third-party services embedded in TapSpent. We believe your spending habits are
-                your business alone.
+                Your financial data never leaves your device. There are no analytics, tracking, advertising, or behavioral profiling embedded in TapSpent. We believe your spending habits are your business alone.
               </p>
             </motion.section>
 
@@ -76,11 +72,9 @@ export default function PrivacyPolicy() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
             >
-              <h2 className="text-xl font-semibold mb-3">Backup & Export</h2>
+              <h2 className="text-xl font-semibold mb-3">Camera & Photo Library</h2>
               <p className="opacity-70">
-                When you use the backup feature, a CSV file is generated locally on your device.
-                You control where this file is saved or shared. TapSpent does not upload backups
-                to any server.
+                TapSpent requests camera and photo library access only when you choose to scan a bill, receipt, or bank statement. The captured image or selected photo is processed on your device and is never uploaded anywhere. You can revoke either permission at any time in iOS Settings → TapSpent.
               </p>
             </motion.section>
 
@@ -89,10 +83,9 @@ export default function PrivacyPolicy() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.25 }}
             >
-              <h2 className="text-xl font-semibold mb-3">No Account Required</h2>
+              <h2 className="text-xl font-semibold mb-3">Apple Intelligence & On-Device Recognition</h2>
               <p className="opacity-70">
-                TapSpent works entirely offline and does not require you to create an account,
-                sign in, or provide any personal information.
+                Scan with Apple Intelligence uses Apple's on-device Foundation Models and the Vision framework to read amounts, dates, and merchants from your documents. All recognition happens locally on your iPhone — the image, the extracted text, and the parsed result are not sent to TapSpent's servers, Apple's servers, or any third party.
               </p>
             </motion.section>
 
@@ -101,11 +94,9 @@ export default function PrivacyPolicy() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
             >
-              <h2 className="text-xl font-semibold mb-3">In-App Purchases</h2>
+              <h2 className="text-xl font-semibold mb-3">Currency Exchange Rates</h2>
               <p className="opacity-70">
-                TapSpent offers an optional Pro upgrade as a one-time in-app purchase. All
-                purchase transactions are processed securely by Apple through the App Store.
-                TapSpent does not collect or store any payment information.
+                If you change the display currency, TapSpent fetches public exchange rates from api.frankfurter.app (a free, anonymous rates API run by the European Central Bank). This request contains no personal data and no information about your expenses — only a request for the latest rates. Rates are then cached on your device.
               </p>
             </motion.section>
 
@@ -114,10 +105,53 @@ export default function PrivacyPolicy() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.35 }}
             >
+              <h2 className="text-xl font-semibold mb-3">Notifications</h2>
+              <p className="opacity-70">
+                TapSpent can schedule local notifications for salary credit reminders and monthly reflection prompts. These are scheduled entirely on your device by iOS; no push servers or remote services are involved. You can disable notifications at any time in iOS Settings → TapSpent → Notifications.
+              </p>
+            </motion.section>
+
+            <motion.section
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+            >
+              <h2 className="text-xl font-semibold mb-3">Backup & Export</h2>
+              <p className="opacity-70">
+                When you use the backup feature, a CSV file is generated locally on your device. You control where this file is saved or shared. TapSpent does not upload backups to any server.
+              </p>
+            </motion.section>
+
+            <motion.section
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.45 }}
+            >
+              <h2 className="text-xl font-semibold mb-3">No Account Required</h2>
+              <p className="opacity-70">
+                TapSpent works entirely offline (apart from the optional exchange-rate refresh) and does not require you to create an account, sign in, or provide any personal information.
+              </p>
+            </motion.section>
+
+            <motion.section
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5 }}
+            >
+              <h2 className="text-xl font-semibold mb-3">In-App Purchases</h2>
+              <p className="opacity-70">
+                TapSpent offers an optional Pro upgrade through the App Store. All purchase transactions are processed securely by Apple. TapSpent does not collect or store any payment information.
+              </p>
+            </motion.section>
+
+            <motion.section
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.55 }}
+            >
               <h2 className="text-xl font-semibold mb-3">Changes to This Policy</h2>
               <p className="opacity-70">
-                If we make changes to this privacy policy, we will update it within the app.
-                Since we do not collect any data, changes are unlikely.
+                If we make changes to this privacy policy, we will update it within the app and on our website. Since we do not collect any personal data, changes are likely to be minor.
               </p>
             </motion.section>
 

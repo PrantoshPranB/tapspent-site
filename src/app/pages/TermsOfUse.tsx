@@ -52,8 +52,7 @@ export default function TermsOfUse() {
             >
               <h2 className="text-xl font-semibold mb-3">Acceptance of Terms</h2>
               <p className="opacity-70">
-                By downloading, installing, or using TapSpent, you agree to these terms. If you
-                do not agree, please do not use the app.
+                By downloading, installing, or using TapSpent, you agree to these terms. If you do not agree, please do not use the app.
               </p>
             </motion.section>
 
@@ -64,9 +63,7 @@ export default function TermsOfUse() {
             >
               <h2 className="text-xl font-semibold mb-3">Use of the App</h2>
               <p className="opacity-70">
-                TapSpent is a personal finance tracking tool intended for individual use. You are
-                responsible for all data you enter into the app. The app is provided for
-                informational purposes and is not a substitute for professional financial advice.
+                TapSpent is a personal finance tracking tool intended for individual use. You are responsible for all data you enter into the app. The app is provided for informational purposes and is not a substitute for professional financial advice.
               </p>
             </motion.section>
 
@@ -75,11 +72,9 @@ export default function TermsOfUse() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
             >
-              <h2 className="text-xl font-semibold mb-3">Data Responsibility</h2>
+              <h2 className="text-xl font-semibold mb-3">Scan with Apple Intelligence</h2>
               <p className="opacity-70">
-                Since all data is stored locally on your device, you are responsible for
-                maintaining backups. Uninstalling the app or resetting your device without
-                backing up will result in permanent data loss.
+                Scan with Apple Intelligence uses Apple's on-device Foundation Models and the Vision framework to extract details from bills, receipts, and bank statements. Results depend on the quality, language, and layout of the source document and are not guaranteed to be accurate. You are required to review and confirm the parsed amount, date, and category before each expense is saved. TapSpent is not responsible for incorrect expenses created from misread documents.
               </p>
             </motion.section>
 
@@ -88,11 +83,9 @@ export default function TermsOfUse() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.25 }}
             >
-              <h2 className="text-xl font-semibold mb-3">Intellectual Property</h2>
+              <h2 className="text-xl font-semibold mb-3">Data Responsibility</h2>
               <p className="opacity-70">
-                TapSpent and all its content, features, and functionality are owned by the
-                developer. The app is protected by copyright and other intellectual property
-                laws.
+                Since all data is stored locally on your device, you are responsible for maintaining backups. Uninstalling the app or resetting your device without backing up will result in permanent data loss.
               </p>
             </motion.section>
 
@@ -101,12 +94,9 @@ export default function TermsOfUse() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
             >
-              <h2 className="text-xl font-semibold mb-3">Limitation of Liability</h2>
+              <h2 className="text-xl font-semibold mb-3">Third-Party Services</h2>
               <p className="opacity-70">
-                TapSpent is provided "as is" without warranty of any kind. The developer shall
-                not be liable for any damages arising from the use or inability to use the app,
-                including but not limited to data loss or financial decisions made based on
-                information in the app.
+                Exchange-rate conversion uses the public Frankfurter API (api.frankfurter.app). In-app purchases are handled by Apple's App Store. TapSpent has no control over the availability, accuracy, or terms of these services and is not responsible for their outages or changes.
               </p>
             </motion.section>
 
@@ -115,10 +105,31 @@ export default function TermsOfUse() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.35 }}
             >
+              <h2 className="text-xl font-semibold mb-3">Intellectual Property</h2>
+              <p className="opacity-70">
+                TapSpent and all its content, features, and functionality are owned by the developer. The app is protected by copyright and other intellectual property laws.
+              </p>
+            </motion.section>
+
+            <motion.section
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+            >
+              <h2 className="text-xl font-semibold mb-3">Limitation of Liability</h2>
+              <p className="opacity-70">
+                TapSpent is provided "as is" without warranty of any kind. The developer shall not be liable for any damages arising from the use or inability to use the app, including but not limited to data loss, scanning errors, exchange-rate inaccuracies, or financial decisions made based on information in the app.
+              </p>
+            </motion.section>
+
+            <motion.section
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.45 }}
+            >
               <h2 className="text-xl font-semibold mb-3">Changes to Terms</h2>
               <p className="opacity-70">
-                We reserve the right to update these terms at any time. Continued use of the app
-                after changes constitutes acceptance of the new terms.
+                We reserve the right to update these terms at any time. Continued use of the app after changes constitutes acceptance of the new terms.
               </p>
             </motion.section>
 
