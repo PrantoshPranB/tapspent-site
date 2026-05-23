@@ -9,7 +9,11 @@
       "Bash(curl -s -w \"\\\\nStatus: %{http_code}\\\\n\" http://localhost:5173/privacy)",
       "Bash(curl -s http://localhost:5173/about)",
       "Bash(grep -E \"\\\\.\\(jpg|jpeg|png\\)$\")",
-      "Bash(sort -k6 -r)"
+      "Bash(sort -k6 -r)",
+      "Bash(mkdir -p /Users/prantoshbhattacharyya/Documents/Git/tapspent-site/public)"
+    ],
+    "additionalDirectories": [
+      "/Users/prantoshbhattacharyya/Documents/Git/tapspent-site"
     ]
   }
 }

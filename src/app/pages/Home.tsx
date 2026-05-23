@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { Download, Shield } from "lucide-react";
 import { Link } from "react-router";
+import { Helmet } from "react-helmet-async";
 import logo from "../../imports/TapSpent_Logo_Text-2.png";
 import heroImage from "../../imports/101.png";
 import privacyImage from "../../imports/102.png";
@@ -14,7 +15,15 @@ import effortlessImage from "../../imports/109.png";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#F5F3ED] overflow-x-hidden">
+    <>
+      <Helmet>
+        <title>TapSpent — Mindful spending made simple</title>
+        <meta
+          name="description"
+          content="A calm, private and thoughtful way to understand your spending habits without guilt."
+        />
+      </Helmet>
+      <div className="min-h-screen bg-[#F5F3ED] overflow-x-hidden">
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-[#6B7C5E]/10">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -863,6 +872,7 @@ export default function Home() {
           backgroundRepeat: 'repeat'
         }}
       />
-    </div>
+      </div>
+    </>
   );
 }

@@ -1,6 +1,7 @@
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router";
 import { useEffect } from "react";
+import { HelmetProvider } from "react-helmet-async";
 import Home from "./app/pages/Home.tsx";
 import About from "./app/pages/About.tsx";
 import PrivacyPolicy from "./app/pages/PrivacyPolicy.tsx";
@@ -32,8 +33,10 @@ function App() {
 }
 
 createRoot(document.getElementById("root")!).render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
+  <HelmetProvider>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </HelmetProvider>
 );
   

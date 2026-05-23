@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { Link } from "react-router";
 import { Mail, Github, ExternalLink } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import logo from "../../imports/TapSpent_Logo_Text-2.png";
 import profilePhoto from "../../imports/MyPhoto.jpg";
 
@@ -29,7 +30,15 @@ const storyCards = [
 
 export default function About() {
   return (
-    <div className="min-h-screen bg-white">
+    <>
+      <Helmet>
+        <title>About TapSpent — Mindful Spending Companion</title>
+        <meta
+          name="description"
+          content="Learn the story behind TapSpent and how we're changing the way people think about their spending."
+        />
+      </Helmet>
+      <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="sticky top-0 z-50 bg-white border-b border-gray-200">
         <div className="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
@@ -480,6 +489,7 @@ export default function About() {
           </p>
         </div>
       </footer>
-    </div>
+      </div>
+    </>
   );
 }

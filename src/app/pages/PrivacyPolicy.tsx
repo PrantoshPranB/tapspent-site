@@ -1,10 +1,19 @@
 import { motion } from "motion/react";
 import { Link } from "react-router";
+import { Helmet } from "react-helmet-async";
 import logo from "../../imports/TapSpent_Logo_Text-2.png";
 
 export default function PrivacyPolicy() {
   return (
-    <div className="min-h-screen bg-white">
+    <>
+      <Helmet>
+        <title>Privacy Policy — TapSpent</title>
+        <meta
+          name="description"
+          content="TapSpent Privacy Policy. Learn how we protect your data and respect your privacy."
+        />
+      </Helmet>
+      <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="sticky top-0 z-50 bg-white border-b border-gray-200">
         <div className="max-w-4xl mx-auto px-6 py-6 flex items-center justify-between">
@@ -168,6 +177,7 @@ export default function PrivacyPolicy() {
           </div>
         </motion.div>
       </div>
-    </div>
+      </div>
+    </>
   );
 }

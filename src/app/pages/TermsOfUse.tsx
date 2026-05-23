@@ -1,10 +1,19 @@
 import { motion } from "motion/react";
 import { Link } from "react-router";
+import { Helmet } from "react-helmet-async";
 import logo from "../../imports/TapSpent_Logo_Text-2.png";
 
 export default function TermsOfUse() {
   return (
-    <div className="min-h-screen bg-white">
+    <>
+      <Helmet>
+        <title>Terms of Use — TapSpent</title>
+        <meta
+          name="description"
+          content="TapSpent Terms of Use. Read our terms and conditions for using the platform."
+        />
+      </Helmet>
+      <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="sticky top-0 z-50 bg-white border-b border-gray-200">
         <div className="max-w-4xl mx-auto px-6 py-6 flex items-center justify-between">
@@ -146,6 +155,7 @@ export default function TermsOfUse() {
           </div>
         </motion.div>
       </div>
-    </div>
+      </div>
+    </>
   );
 }
