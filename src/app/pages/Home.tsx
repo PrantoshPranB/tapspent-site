@@ -1,5 +1,4 @@
 import { motion } from "motion/react";
-import { Download, Shield } from "lucide-react";
 import { Link } from "react-router";
 import { Helmet } from "react-helmet-async";
 import logo from "../../imports/TapSpent_Logo_Text-2.png";
@@ -32,17 +31,7 @@ export default function Home() {
           </Link>
 
           <nav className="hidden md:flex items-center gap-8">
-            <a
-              href="#features"
-              className="text-sm opacity-70 hover:opacity-100 transition-opacity"
-              style={{
-                fontFamily: 'Inter, system-ui, sans-serif',
-                color: '#3A3D35'
-              }}
-            >
-              Features
-            </a>
-            <Link
+<Link
               to="/about"
               className="text-sm opacity-70 hover:opacity-100 transition-opacity"
               style={{
@@ -72,7 +61,7 @@ export default function Home() {
               fontFamily: 'Inter, system-ui, sans-serif'
             }}
           >
-            Download
+            Coming Soon...
           </motion.button>
         </div>
       </header>
@@ -801,8 +790,7 @@ export default function Home() {
                 fontSize: '1.0625rem'
               }}
             >
-              <Download className="w-5 h-5" />
-              Download on the App Store
+              Coming Soon...
             </motion.button>
           </motion.div>
         </div>
@@ -858,7 +846,7 @@ export default function Home() {
                 color: '#3A3D35'
               }}
             >
-              Mindful spending. More clarity. Every day.
+              Mindful spending made simple
             </p>
           </div>
         </div>
