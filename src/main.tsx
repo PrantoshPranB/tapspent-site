@@ -1,11 +1,12 @@
 import { createRoot } from "react-dom/client";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router";
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router";
 import { useEffect } from "react";
 import { HelmetProvider } from "react-helmet-async";
 import Home from "./app/pages/Home.tsx";
 import About from "./app/pages/About.tsx";
 import PrivacyPolicy from "./app/pages/PrivacyPolicy.tsx";
 import TermsOfUse from "./app/pages/TermsOfUse.tsx";
+import Support from "./app/pages/Support.tsx";
 import "./styles/index.css";
 
 function ScrollToTop() {
@@ -24,9 +25,10 @@ function App() {
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/about" element={<Navigate to="/" replace />} />
         <Route path="/privacy" element={<PrivacyPolicy />} />
         <Route path="/terms" element={<TermsOfUse />} />
+        <Route path="/support" element={<Support />} />
       </Routes>
     </>
   );

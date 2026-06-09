@@ -31,16 +31,6 @@ export default function Home() {
           </Link>
 
           <nav className="hidden md:flex items-center gap-8">
-<Link
-              to="/about"
-              className="text-sm opacity-70 hover:opacity-100 transition-opacity"
-              style={{
-                fontFamily: 'Inter, system-ui, sans-serif',
-                color: '#3A3D35'
-              }}
-            >
-              About
-            </Link>
             <Link
               to="/privacy"
               className="text-sm opacity-70 hover:opacity-100 transition-opacity"
@@ -50,6 +40,16 @@ export default function Home() {
               }}
             >
               Privacy
+            </Link>
+            <Link
+              to="/support"
+              className="text-sm opacity-70 hover:opacity-100 transition-opacity"
+              style={{
+                fontFamily: 'Inter, system-ui, sans-serif',
+                color: '#3A3D35'
+              }}
+            >
+              Support
             </Link>
           </nav>
 
@@ -806,16 +806,6 @@ export default function Home() {
 
             <div className="flex gap-8 flex-wrap justify-center">
               <Link
-                to="/about"
-                className="text-sm opacity-50 hover:opacity-100 transition-opacity"
-                style={{
-                  fontFamily: 'Inter, system-ui, sans-serif',
-                  color: '#3A3D35'
-                }}
-              >
-                About
-              </Link>
-              <Link
                 to="/privacy"
                 className="text-sm opacity-50 hover:opacity-100 transition-opacity"
                 style={{
@@ -834,6 +824,16 @@ export default function Home() {
                 }}
               >
                 Terms of Use
+              </Link>
+              <Link
+                to="/support"
+                className="text-sm opacity-50 hover:opacity-100 transition-opacity"
+                style={{
+                  fontFamily: 'Inter, system-ui, sans-serif',
+                  color: '#3A3D35'
+                }}
+              >
+                Support
               </Link>
             </div>
           </div>

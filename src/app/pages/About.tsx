@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { Link } from "react-router";
-import { Mail, Github, ExternalLink } from "lucide-react";
+import { Mail, ExternalLink } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import logo from "../../imports/TapSpent_Logo_Text-2.png";
 import profilePhoto from "../../imports/MyPhoto.jpg";
@@ -164,7 +164,7 @@ export default function About() {
                   <motion.a
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.98 }}
-                    href="mailto:support@tapspent.in"
+                    href="mailto:hello@tapspent.in"
                     className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#3A3D35] text-white rounded-full hover:shadow-lg transition-all duration-300"
                     style={{
                       fontFamily: 'Inter, system-ui, sans-serif',
@@ -173,21 +173,6 @@ export default function About() {
                   >
                     <Mail className="w-5 h-5" />
                     Get in Touch
-                  </motion.a>
-                  <motion.a
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.98 }}
-                    href="https://github.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-[#3A3D35] text-[#3A3D35] rounded-full hover:bg-[#3A3D35] hover:text-white transition-all duration-300"
-                    style={{
-                      fontFamily: 'Inter, system-ui, sans-serif',
-                      fontSize: '1rem'
-                    }}
-                  >
-                    <Github className="w-5 h-5" />
-                    GitHub
                   </motion.a>
                 </div>
               </motion.div>
