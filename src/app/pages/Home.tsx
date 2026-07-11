@@ -53,7 +53,10 @@ export default function Home() {
             </Link>
           </nav>
 
-          <motion.button
+          <motion.a
+            href="https://apps.apple.com/app/tapspent/id6771104622"
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
             className="px-6 py-2 bg-[#3A3D35] text-white rounded-full text-sm hover:shadow-lg transition-all duration-300"
@@ -61,8 +64,8 @@ export default function Home() {
               fontFamily: 'Inter, system-ui, sans-serif'
             }}
           >
-            Coming Soon...
-          </motion.button>
+            Download
+          </motion.a>
         </div>
       </header>
 
@@ -781,7 +784,10 @@ export default function Home() {
             >
               Start tracking mindfully
             </h2>
-            <motion.button
+            <motion.a
+              href="https://apps.apple.com/app/tapspent/id6771104622"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
               className="inline-flex items-center gap-3 px-10 py-5 bg-[#3A3D35] text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
@@ -790,8 +796,8 @@ export default function Home() {
                 fontSize: '1.0625rem'
               }}
             >
-              Coming Soon...
-            </motion.button>
+              Download
+            </motion.a>
           </motion.div>
         </div>
       </section>
