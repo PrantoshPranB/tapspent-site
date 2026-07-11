@@ -106,7 +106,7 @@ export default function Support() {
               className="mt-16 pt-8 border-t border-gray-200"
             >
               <p className="text-sm opacity-50">
-                Last updated: June 2026
+                Last updated: July 2026
               </p>
             </motion.div>
           </div>
