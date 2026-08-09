@@ -1,6 +1,9 @@
 import { motion } from "motion/react";
 import { Link } from "react-router";
 import { Helmet } from "react-helmet-async";
+import { SiteHeader } from "../components/SiteHeader";
+import { SiteFooter } from "../components/SiteFooter";
+import { tapspent } from "../products";
 import logo from "../../imports/TapSpent_Logo_Text-2.png";
 import heroImage from "../../imports/101.png";
 import privacyImage from "../../imports/102.png";
@@ -23,51 +26,14 @@ export default function Home() {
         />
       </Helmet>
       <div className="min-h-screen bg-[#F5F3ED] overflow-x-hidden">
-      {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-[#6B7C5E]/10">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <Link to="/">
-            <img src={logo} alt="TapSpent" className="h-8 cursor-pointer" />
-          </Link>
-
-          <nav className="hidden md:flex items-center gap-8">
-            <Link
-              to="/privacy"
-              className="text-sm opacity-70 hover:opacity-100 transition-opacity"
-              style={{
-                fontFamily: 'Inter, system-ui, sans-serif',
-                color: '#3A3D35'
-              }}
-            >
-              Privacy
-            </Link>
-            <Link
-              to="/support"
-              className="text-sm opacity-70 hover:opacity-100 transition-opacity"
-              style={{
-                fontFamily: 'Inter, system-ui, sans-serif',
-                color: '#3A3D35'
-              }}
-            >
-              Support
-            </Link>
-          </nav>
-
-          <motion.a
-            href="https://apps.apple.com/app/tapspent/id6771104622"
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.98 }}
-            className="px-6 py-2 bg-[#3A3D35] text-white rounded-full text-sm hover:shadow-lg transition-all duration-300"
-            style={{
-              fontFamily: 'Inter, system-ui, sans-serif'
-            }}
-          >
-            Download
-          </motion.a>
-        </div>
-      </header>
+      <SiteHeader
+        product={tapspent}
+        navLinks={[
+          { label: "CardBox", to: "/cardbox" },
+          { label: "Privacy", to: "/privacy" },
+          { label: "Support", to: "/support" },
+        ]}
+      />
 
       {/* Hero Section - Clarity for every day */}
       <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-6 py-20 pt-32">
@@ -802,61 +768,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-16 px-6 bg-[#F5F3ED] border-t border-[#6B7C5E]/10">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-8">
-            <Link to="/">
-              <img src={logo} alt="TapSpent" className="h-8 cursor-pointer" />
-            </Link>
-
-            <div className="flex gap-8 flex-wrap justify-center">
-              <Link
-                to="/privacy"
-                className="text-sm opacity-50 hover:opacity-100 transition-opacity"
-                style={{
-                  fontFamily: 'Inter, system-ui, sans-serif',
-                  color: '#3A3D35'
-                }}
-              >
-                Privacy Policy
-              </Link>
-              <Link
-                to="/terms"
-                className="text-sm opacity-50 hover:opacity-100 transition-opacity"
-                style={{
-                  fontFamily: 'Inter, system-ui, sans-serif',
-                  color: '#3A3D35'
-                }}
-              >
-                Terms of Use
-              </Link>
-              <Link
-                to="/support"
-                className="text-sm opacity-50 hover:opacity-100 transition-opacity"
-                style={{
-                  fontFamily: 'Inter, system-ui, sans-serif',
-                  color: '#3A3D35'
-                }}
-              >
-                Support
-              </Link>
-            </div>
-          </div>
-
-          <div className="mt-8 text-center">
-            <p
-              className="text-xs opacity-30"
-              style={{
-                fontFamily: 'Inter, system-ui, sans-serif',
-                color: '#3A3D35'
-              }}
-            >
-              Mindful spending made simple
-            </p>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter
+        product={tapspent}
+        links={[
+          { label: "Privacy Policy", to: "/privacy" },
+          { label: "Terms of Use", to: "/terms" },
+          { label: "Support", to: "/support" },
+          { label: "CardBox", to: "/cardbox" },
+        ]}
+      />
 
       {/* Subtle grain texture overlay */}
       <div

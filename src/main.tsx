@@ -3,10 +3,13 @@ import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-route
 import { useEffect } from "react";
 import { HelmetProvider } from "react-helmet-async";
 import Home from "./app/pages/Home.tsx";
-import About from "./app/pages/About.tsx";
 import PrivacyPolicy from "./app/pages/PrivacyPolicy.tsx";
 import TermsOfUse from "./app/pages/TermsOfUse.tsx";
 import Support from "./app/pages/Support.tsx";
+import CardBoxHome from "./app/pages/cardbox/CardBoxHome.tsx";
+import CardBoxPrivacy from "./app/pages/cardbox/CardBoxPrivacy.tsx";
+import CardBoxTerms from "./app/pages/cardbox/CardBoxTerms.tsx";
+import CardBoxSupport from "./app/pages/cardbox/CardBoxSupport.tsx";
 import "./styles/index.css";
 
 function ScrollToTop() {
@@ -29,6 +32,11 @@ function App() {
         <Route path="/privacy" element={<PrivacyPolicy />} />
         <Route path="/terms" element={<TermsOfUse />} />
         <Route path="/support" element={<Support />} />
+
+        <Route path="/cardbox" element={<CardBoxHome />} />
+        <Route path="/cardbox/privacy" element={<CardBoxPrivacy />} />
+        <Route path="/cardbox/terms" element={<CardBoxTerms />} />
+        <Route path="/cardbox/support" element={<CardBoxSupport />} />
       </Routes>
     </>
   );

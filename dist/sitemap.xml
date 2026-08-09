@@ -4,12 +4,24 @@
     <loc>https://www.tapspent.in/</loc>
   </url>
   <url>
-    <loc>https://www.tapspent.in/about</loc>
-  </url>
-  <url>
     <loc>https://www.tapspent.in/privacy</loc>
   </url>
   <url>
     <loc>https://www.tapspent.in/terms</loc>
+  </url>
+  <url>
+    <loc>https://www.tapspent.in/support</loc>
+  </url>
+  <url>
+    <loc>https://www.tapspent.in/cardbox</loc>
+  </url>
+  <url>
+    <loc>https://www.tapspent.in/cardbox/privacy</loc>
+  </url>
+  <url>
+    <loc>https://www.tapspent.in/cardbox/terms</loc>
+  </url>
+  <url>
+    <loc>https://www.tapspent.in/cardbox/support</loc>
   </url>
 </urlset>

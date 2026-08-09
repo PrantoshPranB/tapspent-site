@@ -10,7 +10,16 @@
       "Bash(curl -s http://localhost:5173/about)",
       "Bash(grep -E \"\\\\.\\(jpg|jpeg|png\\)$\")",
       "Bash(sort -k6 -r)",
-      "Bash(mkdir -p /Users/prantoshbhattacharyya/Documents/Git/tapspent-site/public)"
+      "Bash(mkdir -p /Users/prantoshbhattacharyya/Documents/Git/tapspent-site/public)",
+      "Read(//Users/prantoshbhattacharyya/Documents/Git/**)",
+      "Read(//Users/prantoshbhattacharyya/Downloads/**)",
+      "Bash(find ~/Documents/Git/CardBox ~/Desktop ~/Downloads ~/Pictures -type f \\\\\\( -iname \"*.png\" -o -iname \"*.jpg\" \\\\\\) -mtime -3 2>/dev/null | head -50; echo \"=== CardBox repo images ===\"; find ~/Documents/Git/CardBox -type f \\\\\\( -iname \"*.png\" -o -iname \"*.jpg\" \\\\\\) 2>/dev/null | head -40)",
+      "Read(//Users/prantoshbhattacharyya/Documents/Git/CardBox/**)",
+      "Bash(npx tsc *)",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless --disable-gpu --hide-scrollbars --window-size=1440,3000 --virtual-time-budget=8000 --screenshot=/tmp/claude-501/-Users-prantoshbhattacharyya-Documents-Git-tapspent-site/37bf672f-9f1e-471b-ac17-e63cbf45439b/scratchpad/cardbox-top.png http://localhost:5173/cardbox)",
+      "Bash(curl -s -o /dev/null -w \"dev:%{http_code}\\\\n\" http://localhost:5173/cardbox)",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless --disable-gpu --hide-scrollbars --window-size=1440,900 --virtual-time-budget=6000 --screenshot=/tmp/claude-501/-Users-prantoshbhattacharyya-Documents-Git-tapspent-site/37bf672f-9f1e-471b-ac17-e63cbf45439b/scratchpad/hdr.png http://localhost:5173/cardbox)",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless --disable-gpu --hide-scrollbars --window-size=1200,1400 --virtual-time-budget=6000 --screenshot=/tmp/claude-501/-Users-prantoshbhattacharyya-Documents-Git-tapspent-site/37bf672f-9f1e-471b-ac17-e63cbf45439b/scratchpad/doc.png http://localhost:5173/cardbox/privacy)"
     ],
     "additionalDirectories": [
       "/Users/prantoshbhattacharyya/Documents/Git/tapspent-site"
