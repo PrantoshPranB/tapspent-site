@@ -14,12 +14,15 @@ export function DocPage({
   product,
   title,
   description,
+  intro,
   sections,
   lastUpdated,
 }: {
   product: Product;
   title: string;
   description: string;
+  /** Optional lead paragraph shown above the first section. */
+  intro?: ReactNode;
   sections: DocSection[];
   lastUpdated: string;
 }) {
@@ -68,11 +71,22 @@ export function DocPage({
             <div
               className="space-y-8"
               style={{
-                fontFamily: "Inter, system-ui, sans-serif",
+                fontFamily: product.bodyFont,
                 color: product.ink,
                 lineHeight: "1.7",
               }}
             >
+              {intro && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.05 }}
+                  className="opacity-70 space-y-4 -mt-4"
+                >
+                  {intro}
+                </motion.div>
+              )}
+
               {sections.map((section, i) => (
                 <motion.section
                   key={section.heading}
@@ -81,7 +95,10 @@ export function DocPage({
                   transition={{ delay: 0.1 + i * 0.05 }}
                 >
                   <h2 className="text-xl font-semibold mb-3">{section.heading}</h2>
-                  <p className="opacity-70">{section.body}</p>
+                  {/* Bodies may be rich JSX — headings, lists, tables — so this is a div, not a p. */}
+                  <div className="opacity-70 space-y-4">
+                    {typeof section.body === "string" ? <p>{section.body}</p> : section.body}
+                  </div>
                 </motion.section>
               ))}
 

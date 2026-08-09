@@ -37,7 +37,7 @@ export function SiteFooter({
                 to={link.to}
                 className="text-sm opacity-50 hover:opacity-100 transition-opacity"
                 style={{
-                  fontFamily: "Inter, system-ui, sans-serif",
+                  fontFamily: product.bodyFont,
                   color: product.ink,
                 }}
               >
@@ -51,7 +51,7 @@ export function SiteFooter({
           <p
             className="text-xs opacity-30"
             style={{
-              fontFamily: "Inter, system-ui, sans-serif",
+              fontFamily: product.bodyFont,
               color: product.ink,
             }}
           >

@@ -17,7 +17,7 @@ export function ProductWordmark({
     <span
       className={`${className} flex items-center cursor-pointer`}
       style={{
-        fontFamily: "Inter, system-ui, sans-serif",
+        fontFamily: product.bodyFont,
         fontSize: "1.4rem",
         fontWeight: 800,
         lineHeight: "1",

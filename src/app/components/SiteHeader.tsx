@@ -45,7 +45,7 @@ export function SiteHeader({
               to={link.to}
               className="text-sm opacity-70 hover:opacity-100 transition-opacity"
               style={{
-                fontFamily: "Inter, system-ui, sans-serif",
+                fontFamily: product.bodyFont,
                 color: product.ink,
               }}
             >
@@ -58,7 +58,7 @@ export function SiteHeader({
           <span
             className="px-4 py-2 rounded-full text-xs border"
             style={{
-              fontFamily: "Inter, system-ui, sans-serif",
+              fontFamily: product.bodyFont,
               color: product.accent,
               borderColor: `${product.accent}33`,
               backgroundColor: `${product.accent}0D`,
@@ -78,7 +78,7 @@ export function SiteHeader({
             className="px-6 py-2 text-white rounded-full text-sm hover:shadow-lg transition-all duration-300"
             style={{
               backgroundColor: product.ink,
-              fontFamily: "Inter, system-ui, sans-serif",
+              fontFamily: product.bodyFont,
             }}
           >
             {action.label}

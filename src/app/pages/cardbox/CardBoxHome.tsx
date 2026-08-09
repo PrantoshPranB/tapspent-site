@@ -16,7 +16,7 @@ import settingsDarkShot from "../../../imports/cardbox/settings-dark.png";
 const p = paths(cardbox);
 const ink = cardbox.ink;
 const accent = cardbox.accent;
-const sans = "Inter, system-ui, sans-serif";
+const sans = cardbox.bodyFont;
 
 const rise = {
   initial: { opacity: 0, y: 24 },
@@ -114,11 +114,10 @@ function Feature({
 }
 
 const cardTypes = [
-  "Credit card",
-  "Debit card",
+  "Credit & debit",
   "Payment card",
   "ID card",
-  "Driving licence",
+  "Driving license",
   "PAN card",
   "Aadhaar",
   "Vehicle RC",
@@ -139,7 +138,14 @@ export default function CardBoxHome() {
       </Helmet>
 
       <div className="min-h-screen overflow-x-hidden" style={{ backgroundColor: cardbox.surface }}>
-        <SiteHeader product={cardbox} />
+        <SiteHeader
+          product={cardbox}
+          navLinks={[
+            { label: "TapSpent", to: paths(tapspent).home },
+            { label: "Privacy", to: p.privacy },
+            { label: "Support", to: p.support },
+          ]}
+        />
 
         {/* Hero */}
         <section className="relative px-6 pt-36 pb-24 md:pt-44 md:pb-32 overflow-hidden">
@@ -231,10 +237,10 @@ export default function CardBoxHome() {
           alt="The Add Card screen, with slots for the front and back of a card"
           background="#FFFFFF"
         >
-          Photograph the front and the back. CardBox straightens the shot, cleans it up, and reads the
-          details off the card itself — number, expiry, the name printed on it. Give the card a name,
-          add any fields you want to keep with it, and pick a fallback colour for the cards you would
-          rather not photograph at all.
+          Photograph the front and the back. CardBox finds the card in the shot and you drag the four
+          corners into place, with a magnifier so your thumb never hides the target. Straighten it,
+          adjust brightness, saturation and denoise, and it reads the details off the card itself.
+          Give it a name — the only field you have to fill in — and save.
         </Feature>
 
         {/* Deck */}
@@ -267,7 +273,7 @@ export default function CardBoxHome() {
         <section className="py-24 md:py-32 px-6">
           <div className="max-w-5xl mx-auto text-center">
             <motion.div {...rise}>
-              <Eyebrow>Eleven kinds of card</Eyebrow>
+              <Eyebrow>Ten kinds of card</Eyebrow>
               <SectionHeading>Whatever is in your wallet, it fits.</SectionHeading>
               <div className="max-w-2xl mx-auto">
                 <Body>
@@ -376,9 +382,13 @@ export default function CardBoxHome() {
             <motion.div
               {...rise}
               transition={{ duration: 0.7, delay: 0.1 }}
-              className="mt-12 grid sm:grid-cols-3 gap-4 text-left"
+              className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-left"
             >
               {[
+                {
+                  title: "App Lock",
+                  body: "Require Face ID before CardBox opens, before a card is shared, and before a backup is imported.",
+                },
                 {
                   title: "Encrypted sharing",
                   body: "Send a card to someone and it travels AES-GCM encrypted behind a 6-digit passcode only the two of you know.",
@@ -389,7 +399,7 @@ export default function CardBoxHome() {
                 },
                 {
                   title: "Back up to Files",
-                  body: "Save your whole wallet wherever you choose — including iCloud Drive, if you want it across devices.",
+                  body: "Write your whole wallet to a file and keep it wherever you trust — the backup is unencrypted, so treat it like the cards themselves.",
                 },
               ].map((item) => (
                 <div
@@ -465,9 +475,9 @@ export default function CardBoxHome() {
               className="max-w-xl mx-auto"
               style={{ fontFamily: sans, color: "rgba(255,255,255,0.8)", lineHeight: "1.7" }}
             >
-              CardBox is free for your first five cards. Plus is a single $9.99 purchase — no
+              CardBox is free for your first five cards. Plus is a single purchase — not a
               subscription — that lifts the card limit, unlocks PDF export, and removes the
-              one-share-a-month cap.
+              one-share-a-month cap. The price is shown in the app, in your local currency.
             </p>
 
             <div className="mt-8 flex flex-wrap justify-center gap-3">
@@ -510,7 +520,15 @@ export default function CardBoxHome() {
           </motion.div>
         </section>
 
-        <SiteFooter product={cardbox} />
+        <SiteFooter
+          product={cardbox}
+          links={[
+            { label: "Privacy Policy", to: p.privacy },
+            { label: "Terms of Use", to: p.terms },
+            { label: "Support", to: p.support },
+            { label: "TapSpent", to: paths(tapspent).home },
+          ]}
+        />
       </div>
     </>
   );

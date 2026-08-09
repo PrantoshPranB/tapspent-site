@@ -8,6 +8,8 @@ export type Product = {
   logo?: string;
   /** Splits the text wordmark so the second half takes the accent colour, e.g. Card|Box. */
   wordmarkParts?: [string, string];
+  /** Font for body copy, navigation and UI text. */
+  bodyFont: string;
   /** Display font for page headings. */
   heading: { fontFamily: string; fontWeight: number; letterSpacing: string };
   tagline: string;
@@ -28,6 +30,7 @@ export const tapspent: Product = {
   name: "TapSpent",
   logo: tapspentLogo,
   tagline: "Mindful spending made simple",
+  bodyFont: "Inter, system-ui, sans-serif",
   heading: { fontFamily: '"Instrument Serif", serif', fontWeight: 400, letterSpacing: "-0.02em" },
   status: "live",
   appStoreUrl: "https://apps.apple.com/app/tapspent/id6771104622",
@@ -42,8 +45,9 @@ export const cardbox: Product = {
   name: "CardBox",
   wordmarkParts: ["Card", "Box"],
   tagline: "All your cards. One secure place.",
+  bodyFont: '"Montserrat Alternates", system-ui, sans-serif',
   heading: {
-    fontFamily: "Inter, system-ui, sans-serif",
+    fontFamily: '"Montserrat Alternates", system-ui, sans-serif',
     fontWeight: 800,
     letterSpacing: "-0.035em",
   },
