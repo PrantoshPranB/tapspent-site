@@ -16,6 +16,8 @@ export type Product = {
   /** "live" shows Download buttons; "coming-soon" shows a neutral badge instead. */
   status: "live" | "coming-soon";
   appStoreUrl?: string;
+  /** Label for the App Store button. Defaults to "Download". */
+  ctaLabel?: string;
   supportEmail: string;
   /** Link / highlight colour */
   accent: string;
@@ -51,8 +53,9 @@ export const cardbox: Product = {
     fontWeight: 800,
     letterSpacing: "-0.035em",
   },
-  // Flip to "live" and fill in appStoreUrl once the App Store listing is public.
-  status: "coming-soon",
+  status: "live",
+  appStoreUrl: "https://apps.apple.com/in/app/cardbox-wallet/id6799706630",
+  ctaLabel: "Download now",
   supportEmail: "support@tapspent.in",
   accent: "#4F5BF5",
   ink: "#14161F",

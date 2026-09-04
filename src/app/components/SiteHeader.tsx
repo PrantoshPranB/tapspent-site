@@ -25,7 +25,7 @@ export function SiteHeader({
   const action =
     cta ??
     (product.status === "live" && product.appStoreUrl
-      ? { label: "Download", href: product.appStoreUrl }
+      ? { label: product.ctaLabel ?? "Download", href: product.appStoreUrl }
       : undefined);
 
   return (

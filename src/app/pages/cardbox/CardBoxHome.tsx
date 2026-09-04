@@ -497,10 +497,10 @@ export default function CardBoxHome() {
         {/* Closing */}
         <section className="pb-28 px-6 text-center">
           <motion.div {...rise} className="max-w-2xl mx-auto">
-            <SectionHeading>Coming to the App Store.</SectionHeading>
+            <SectionHeading>Now on the App Store.</SectionHeading>
             <Body>
-              CardBox is in the final stretch. If you want to know the moment it lands, or you have a
-              card type you would like it to handle,{" "}
+              CardBox is out. Download it for iPhone, and if you have a card type you would like it
+              to handle,{" "}
               <a
                 href={`mailto:${cardbox.supportEmail}`}
                 className="underline font-semibold"
@@ -510,6 +510,17 @@ export default function CardBoxHome() {
               </a>
               .
             </Body>
+            <motion.a
+              href={cardbox.appStoreUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.98 }}
+              className="inline-block mt-8 px-8 py-3 text-white rounded-full hover:shadow-lg transition-all duration-300"
+              style={{ backgroundColor: ink, fontFamily: sans, fontWeight: 600 }}
+            >
+              Download now
+            </motion.a>
             <p className="mt-10 text-sm opacity-50" style={{ fontFamily: sans, color: ink }}>
               From the same desk as{" "}
               <Link to={paths(tapspent).home} className="underline" style={{ color: accent }}>
