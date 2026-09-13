@@ -1,0 +1,24 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": [
+          "28J575X4M2.com.tapspent.dewdrift"
+        ],
+        "components": [
+          {
+            "/": "/dewdrift/meet",
+            "?": {
+              "g": "?*"
+            },
+            "comment": "A race invitation."
+          },
+          {
+            "/": "/dewdrift/meet/*",
+            "comment": "Any later shape of the same thing."
+          }
+        ]
+      }
+    ]
+  }
+}

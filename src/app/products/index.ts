@@ -62,6 +62,20 @@ export const cardbox: Product = {
   surface: "#EEF1FA",
 };
 
+export const dewdrift: Product = {
+  slug: "dewdrift",
+  name: "DewDrift",
+  wordmarkParts: ["Dew", "Drift"],
+  tagline: "A window, some weather, and a race down the glass.",
+  bodyFont: "Inter, system-ui, sans-serif",
+  heading: { fontFamily: '"Instrument Serif", serif', fontWeight: 400, letterSpacing: "-0.02em" },
+  status: "coming-soon",
+  supportEmail: "support@tapspent.in",
+  accent: "#6E8B74",
+  ink: "#26302A",
+  surface: "#EDF0EA",
+};
+
 export function paths(product: Product) {
   const base = product.slug ? `/${product.slug}` : "";
   return {

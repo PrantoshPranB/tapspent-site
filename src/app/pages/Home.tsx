@@ -30,6 +30,7 @@ export default function Home() {
         product={tapspent}
         navLinks={[
           { label: "CardBox", to: "/cardbox" },
+          { label: "DewDrift", to: "/dewdrift" },
           { label: "Privacy", to: "/privacy" },
           { label: "Support", to: "/support" },
         ]}
@@ -775,6 +776,7 @@ export default function Home() {
           { label: "Terms of Use", to: "/terms" },
           { label: "Support", to: "/support" },
           { label: "CardBox", to: "/cardbox" },
+          { label: "DewDrift", to: "/dewdrift" },
         ]}
       />
 
